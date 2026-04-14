@@ -1,0 +1,142 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	background: #31B97D url("../../Downloads/imageedit_29_2280249560.png") center/90% no-repeat fixed;
+	}
+
+div.headdec{
+	background: white;
+	width: 10px;
+	height: 10px;
+	horizontal-align: center;
+	display: inline-block;
+	border-radius: 15px;
+	margin: 7px 0px;
+}
+
+
+/* G R I D   S E T U P*/
+
+.header { grid-area: header; }
+.navbar { grid-area: navbar; }
+.main { grid-area: main; }
+.footer { grid-area: footer; }
+
+.grid-container {
+	display: grid;
+	grid-template-areas: 
+		'header header header'
+		'navbar navbar navbar'
+		'main main main'
+	    'footer footer footer';
+	grid-template-columns:
+		auto auto auto;
+	grid-template-rows:
+		auto auto auto;
+	grid-gap: 40px;
+	padding: 30px;
+}
+
+.grid-container > div {
+	font-family: "Caviar Dreams";
+	text-align: center;
+	background-color: rgba(170,240,209,0.59);
+	outline: 6px double #57402f;
+	outline-offset: 5px;
+}
+/* H E A D E R */
+
+div.header {
+	grid-column: 1/span max;
+	grid-row: 1/span 1;
+	padding: 10px;
+}
+
+#namehead {
+	padding: 20px;
+	font: 90px 'Taken by Vultures Demo Regular';
+}
+
+#subhead{
+	font: 30px 'Colombia';
+	letter-spacing: 6px;
+}
+	
+
+/* N A V I G A T I O N */
+
+div.navbar{
+	grid-column: 1/span max;
+	grid-row: 2/span 1;
+	padding: 10px;
+	margin: auto;
+}
+
+.navlinks {
+	list-style-type: none;
+	padding: 20px 10px;
+	font: 30px 'Colombia';
+	text-align: left;
+	letter-spacing: 5px;
+}
+
+a:link{
+    color: #126741;
+    text-decoration: none;
+}
+a:visited{
+	color: #57402F;
+    text-decoration: none;
+}
+a:hover{
+	color: #31B97D;
+    text-decoration: none;
+}
+
+div#navline {
+    border-left: 6px solid #6D503B;
+    height: 200px;
+    float: left;
+	margin: 25px 10px 25px 20px;
+	box-shadow: -4px 2px 5px 0px;
+}
+
+/* M A I N */
+
+div.main {
+	grid-column: 1/span max;
+	grid-row: 3/span 1;
+}
+
+div.main h{
+	font: 40px 'Colombia' ;
+	letter-spacing: 5px;
+	margin: 30px;
+	color: rgba(18,103,65,1.00);
+}
+
+.main img {
+	width: 50%;
+	box-shadow: 5px 5px 10px  black;
+	border: 5px solid #57402F;
+	margin: 10px;
+	vertical-align: top;
+}
+
+/* F O O T E R */
+
+div.footer {
+	grid-column: 1/span max;
+	grid-row: auto/span auto;
+	padding: 20px 20px 0px 20px;
+	margin: auto;
+}
+div.footer h{
+	font: 40px 'Colombia';
+	letter-spacing: 5px;
+}
+div.footer p{
+	font: 20px 'Caviar Dreams';
+	
+}
